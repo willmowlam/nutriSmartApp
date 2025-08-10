@@ -951,40 +951,18 @@ async function fetchRecipes(queryUrl) {
   }
 }
 
-// Toggle functionality for radio buttons (meal-type, dietary-req, and cuisine)
-let lastSelectedMealType = null;
-let lastSelectedDietaryReq = null;
-let lastSelectedCuisine = null;
+// Toggle radio buttons (meal-type, dietary-req, and cuisine)
+const lastSelectedRadio = {};
 
-$(document).on('click', 'input[name="meal-type"]', function() {
-  if (this === lastSelectedMealType) {
+$(document).on('click', 'input[name="meal-type"], input[name="dietary-req"], input[name="cuisine"]', function() {
+  const radioName = this.name;
+  
+  if (this === lastSelectedRadio[radioName]) {
     // If clicking the same radio button, deselect it
     this.checked = false;
-    lastSelectedMealType = null;
+    lastSelectedRadio[radioName] = null;
   } else {
     // Remember this selection
-    lastSelectedMealType = this;
-  }
-});
-
-$(document).on('click', 'input[name="dietary-req"]', function() {
-  if (this === lastSelectedDietaryReq) {
-    // If clicking the same radio button, deselect it
-    this.checked = false;
-    lastSelectedDietaryReq = null;
-  } else {
-    // Remember this selection
-    lastSelectedDietaryReq = this;
-  }
-});
-
-$(document).on('click', 'input[name="cuisine"]', function() {
-  if (this === lastSelectedCuisine) {
-    // If clicking the same radio button, deselect it
-    this.checked = false;
-    lastSelectedCuisine = null;
-  } else {
-    // Remember this selection
-    lastSelectedCuisine = this;
+    lastSelectedRadio[radioName] = this;
   }
 });
