@@ -149,8 +149,8 @@ for (let i = 0; i < cuisinesArray.length; i++) {
 
   let cuisineItemContainerEl = $("<span>").addClass("choiceContainer");
 
-  let cuisineCheckboxEl = $("<input>").attr({
-    type: "checkbox",
+  let cuisineRadioEl = $("<input>").attr({
+    type: "radio",
     name: `cuisine`,
     id: `${cuisine}`,
     value: `${cuisine.toLowerCase()}`,
@@ -159,7 +159,7 @@ for (let i = 0; i < cuisinesArray.length; i++) {
   let cuisineLabel = $("<label>").attr("for", `cuisine-${cuisine}`).text(cuisine);
 
   $("#cuisine-options").append(cuisineItemContainerEl);
-  cuisineItemContainerEl.append(cuisineCheckboxEl, cuisineLabel);
+  cuisineItemContainerEl.append(cuisineRadioEl, cuisineLabel);
 }
 
 // Event listener on the recipe search button
@@ -950,3 +950,41 @@ async function fetchRecipes(queryUrl) {
     console.error("Fetch error:", error);
   }
 }
+
+// Toggle functionality for radio buttons (meal-type, dietary-req, and cuisine)
+let lastSelectedMealType = null;
+let lastSelectedDietaryReq = null;
+let lastSelectedCuisine = null;
+
+$(document).on('click', 'input[name="meal-type"]', function() {
+  if (this === lastSelectedMealType) {
+    // If clicking the same radio button, deselect it
+    this.checked = false;
+    lastSelectedMealType = null;
+  } else {
+    // Remember this selection
+    lastSelectedMealType = this;
+  }
+});
+
+$(document).on('click', 'input[name="dietary-req"]', function() {
+  if (this === lastSelectedDietaryReq) {
+    // If clicking the same radio button, deselect it
+    this.checked = false;
+    lastSelectedDietaryReq = null;
+  } else {
+    // Remember this selection
+    lastSelectedDietaryReq = this;
+  }
+});
+
+$(document).on('click', 'input[name="cuisine"]', function() {
+  if (this === lastSelectedCuisine) {
+    // If clicking the same radio button, deselect it
+    this.checked = false;
+    lastSelectedCuisine = null;
+  } else {
+    // Remember this selection
+    lastSelectedCuisine = this;
+  }
+});
