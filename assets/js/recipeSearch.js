@@ -353,6 +353,13 @@ function renderFavouritesModal() {
   // Clear all favourites
   $("#favouriteRecipesModalContainer").empty();
 
+  // Show/hide Delete All button based on whether there are favourites
+  if (favouriteRecipes.length > 0) {
+    $("#deleteAllFavourites").removeClass("d-none");
+  } else {
+    $("#deleteAllFavourites").addClass("d-none");
+  }
+
   // console.log(favouriteRecipes);
 
   // Loop the favourites in global array and render rows for each recipe
