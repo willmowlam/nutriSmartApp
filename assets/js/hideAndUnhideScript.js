@@ -35,6 +35,8 @@ $("#favouriteNavigation").on("click", function () {
   $("#display-user-choices").addClass("d-none");
   $("#recipe-results-section").addClass("d-none");
   $("#nutritional-analysis-container").addClass("d-none");
+  $("#display-user-ingredients").addClass("d-none");
+  $("#nutritional-info").addClass("d-none");
   renderFavouritesModal();
   renderFavourites();
 });
