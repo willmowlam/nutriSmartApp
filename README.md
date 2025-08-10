@@ -27,13 +27,13 @@ Welcome to nutriSmart, the innovative app designed to revolutionize your meal pl
 
 ### 2. Nutritional Analysis
 
-- Analyze Custom Ingredients: Curious about the nutritional value of your home-cooked meals? Enter your ingredients, and our app will provide a comprehensive breakdown of the meal's nutritional content.
+- Analyse Custom Ingredients: Curious about the nutritional value of your home-cooked meals? Enter your ingredients, and our app will provide a comprehensive breakdown of the meal's nutritional content.
 - Make Healthier Choices: Use this feature to tweak your recipes for better health. Substitute ingredients and see how it impacts the overall nutritional value of your dish.
 
 ### 3. Save Favourite Recipes
 
-- Personalized Cookbook: Easily save your favourite recipes for quick access. Whether it's a family classic or a new find, keep all your beloved recipes at your fingertips.
-- Customize Your Collection: Organize your saved recipes into categories, making meal planning and grocery shopping a breeze.
+- Personalised Cookbook: Easily save your favourite recipes for quick access. Whether it's a family classic or a new find, keep all your beloved recipes at your fingertips.
+- Customise Your Collection: Organise your saved recipes into categories, making meal planning and grocery shopping a breeze.
 
 ## Requirements
 
@@ -74,7 +74,7 @@ Once the webpage link is opened, it should look something like this:
 - Edamam's Recipe Search API
 - Edamam's Nutritional Analysis API
 - Local storage is used to store recent search data and favourite recipes.
-- Bootstrap is utilized for styling and layout purposes.
+- Bootstrap is utilised for styling and layout purposes.
 
 
 ## Credits
