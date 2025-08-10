@@ -94,8 +94,23 @@ a:hover{
     background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top; /* prevent image floating off screen */
+    background-position: center center;
     min-height: 35vh;
+}
+
+/* Prevent image from becoming too zoomed in on large screens */
+@media screen and (min-width: 1200px) {
+    .jumbotman {
+        background-size: 120%;
+        background-position: center center;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .jumbotman {
+        background-size: 100%;
+        background-position: center center;
+    }
 }
 
 .form-search{
