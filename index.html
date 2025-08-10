@@ -164,9 +164,16 @@
             <button id="searchRecipes" type="button" class="d-none btn btn-primary">
               Find Recipes
             </button>
+            
+            <!-- Filter Toggle Button -->
+            <button class="btn d-none" type="button" data-bs-toggle="collapse" data-bs-target="#filterSection" aria-expanded="false" aria-controls="filterSection" id="filterToggleBtn">
+                <i class="bi bi-funnel"></i> Show Filters
+            </button>
 
-            <!-- dietary checkboxes -->
-            <div class="widget">
+            <!-- Collapsible Filter Section -->
+            <div class="collapse" id="filterSection">
+              <!-- dietary checkboxes -->
+              <div class="widget">
               <!-- meal type -->
               <fieldset>
                 <legend>Meal type</legend>
@@ -226,6 +233,7 @@
                 <legend>Cuisine</legend>
                 <!-- dynamically render cuisine options here -->
               </fieldset>
+              </div>
             </div>
           </div>
         </div>

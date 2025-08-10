@@ -113,9 +113,10 @@ function renderRecipeSearchIngredients() {
     $("#ingredientsToSearch").append(button);
   }
 
-  // Show the search button if there are ingredients to search with
+  // Show the search button and filter toggle if there are ingredients to search with
   if (i > 0) {
     $("#searchRecipes").removeClass("d-none");
+    $("#filterToggleBtn").removeClass("d-none");
   }
 }
 
@@ -964,4 +965,22 @@ $(document).on('click', 'input[name="meal-type"], input[name="dietary-req"], inp
     // Remember this selection
     lastSelectedRadio[radioName] = this;
   }
+});
+
+// Event listener for filter toggle button
+$("#filterToggleBtn").on("click", function () {
+  const filterSection = $("#filterSection");
+  const button = $(this);
+  const icon = button.find("i");
+  
+  // Toggle button text and icon based on collapse state
+  filterSection.on('shown.bs.collapse', function () {
+    icon.removeClass("bi-funnel").addClass("bi-funnel-fill");
+    button.contents().last()[0].textContent = " Hide Filters";
+  });
+  
+  filterSection.on('hidden.bs.collapse', function () {
+    icon.removeClass("bi-funnel-fill").addClass("bi-funnel");
+    button.contents().last()[0].textContent = " Show Filters";
+  });
 });

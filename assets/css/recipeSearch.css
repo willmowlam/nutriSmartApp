@@ -60,6 +60,20 @@ fieldset {
   margin-right: 1rem;
 }
 
+/* Filter toggle button */
+#filterToggleBtn {
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.5rem;
+}
+
+#filterToggleBtn:hover {
+  color: var(--dark-orange);
+}
+
+#filterToggleBtn i {
+  margin-right: 0.5rem;
+}
+
 label {
   padding: 0.2rem;
   margin: 0.1rem;

@@ -6,6 +6,7 @@ $("#recipeNavigation").on("click", function () {
   $("#nutritional-analysis-container").addClass("d-none");
   // Clear the ingredients search
   $("#searchRecipes").addClass("d-none");
+  $("#filterToggleBtn").addClass("d-none");
   $("#display-user-choices").removeClass("d-none");
   $("#recipe-results").empty();
   $("#recipe-results-section").removeClass("d-none");
