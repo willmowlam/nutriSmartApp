@@ -579,7 +579,7 @@ function renderRecipes(data) {
                   <tr id="calories-container">
                     <th colspan="3">
                       <b>Calories</b>
-                      <span class="total-calories">${recipe.calories.toFixed(0)}</span>
+                      <span class="total-calories">${(recipe.calories / recipeYield).toFixed(0)}</span>
                     </th>
                   </tr>
     
@@ -596,11 +596,11 @@ function renderRecipes(data) {
                     <th colspan="2">
                       <b>Total Fat</b>
                       <span class="quantity">${
-                        totalNutrients.FAT.quantity.toFixed(1) + totalNutrients.FAT.unit
+                        (totalNutrients.FAT.quantity / recipeYield).toFixed(1) + totalNutrients.FAT.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.FAT.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.FAT.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
                   <!-- saturated fat -->
@@ -609,11 +609,11 @@ function renderRecipes(data) {
                     <th>
                       Saturated Fat
                       <span class="quantity">${
-                        totalNutrients.FASAT.quantity.toFixed(1) + totalNutrients.FASAT.unit
+                        (totalNutrients.FASAT.quantity / recipeYield).toFixed(1) + totalNutrients.FASAT.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.FASAT.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.FASAT.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
     
@@ -622,11 +622,11 @@ function renderRecipes(data) {
                     <th colspan="2">
                       <b>Cholesterol</b>
                       <span class="quantity">${
-                        totalNutrients.CHOLE.quantity.toFixed(1) + totalNutrients.CHOLE.unit
+                        (totalNutrients.CHOLE.quantity / recipeYield).toFixed(1) + totalNutrients.CHOLE.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.CHOLE.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.CHOLE.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
     
@@ -635,11 +635,11 @@ function renderRecipes(data) {
                     <th colspan="2">
                       <b>Sodium</b>
                       <span class="quantity">${
-                        totalNutrients.NA.quantity.toFixed(1) + totalNutrients.NA.unit
+                        (totalNutrients.NA.quantity / recipeYield).toFixed(1) + totalNutrients.NA.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.NA.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.NA.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
     
@@ -648,11 +648,11 @@ function renderRecipes(data) {
                     <th colspan="2">
                       <b>Total Carbohydrate</b>
                       <span class="quantity">${
-                        totalNutrients.CHOCDF.quantity.toFixed(1) + totalNutrients.CHOCDF.unit
+                        (totalNutrients.CHOCDF.quantity / recipeYield).toFixed(1) + totalNutrients.CHOCDF.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.CHOCDF.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.CHOCDF.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
     
@@ -662,11 +662,11 @@ function renderRecipes(data) {
                     <th>
                       Dietary Fibre
                       <span class="quantity">${
-                        totalNutrients.FIBTG.quantity.toFixed(1) + totalNutrients.FIBTG.unit
+                        (totalNutrients.FIBTG.quantity / recipeYield).toFixed(1) + totalNutrients.FIBTG.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.FIBTG.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.FIBTG.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
     
@@ -676,7 +676,7 @@ function renderRecipes(data) {
                     <th>
                       Sugars
                       <span class="quantity">${
-                        totalNutrients.SUGAR.quantity.toFixed(1) + totalNutrients.SUGAR.unit
+                        (totalNutrients.SUGAR.quantity / recipeYield).toFixed(1) + totalNutrients.SUGAR.unit
                       }</span>
                     </th>
                     <td class="percentage">
@@ -689,17 +689,17 @@ function renderRecipes(data) {
                     <th colspan="2">
                       <b>Protein</b>
                       <span class="quantity">${
-                        totalNutrients.PROCNT.quantity.toFixed(1) + totalNutrients.PROCNT.unit
+                        (totalNutrients.PROCNT.quantity / recipeYield).toFixed(1) + totalNutrients.PROCNT.unit
                       }</span>
                     </th>
                     <td class="percentage">
-                      <b>${dailyPercentage.PROCNT.quantity.toFixed(1)}%</b>
+                      <b>${(dailyPercentage.PROCNT.quantity / recipeYield).toFixed(1)}%</b>
                     </td>
                   </tr>
                 </tbody>
               </table>
               
-              ${renderVitAndMins(recipe)}
+              ${renderVitAndMins(recipe, recipeYield)}
 
             </section>
           </section>            
@@ -739,7 +739,7 @@ function renderDietLabels(recipe) {
 }
 
 // Return a table of vitamins and minerals data for the given recipe
-function renderVitAndMins(recipe) {
+function renderVitAndMins(recipe, recipeYield) {
   let totalDailyPercentage = recipe.totalDaily;
   let firstColumnEmpty = true;
   let tableRow = null;
@@ -769,7 +769,7 @@ function renderVitAndMins(recipe) {
   for (const key in totalDailyPercentage) {
     if (totalDailyPercentage.hasOwnProperty(key)) {
       let vitAndMineralsName = totalDailyPercentage[key].label;
-      let vitAndMineralsQuantity = totalDailyPercentage[key].quantity.toFixed(1);
+      let vitAndMineralsQuantity = (totalDailyPercentage[key].quantity / recipeYield).toFixed(1);
 
       // filter out zero quantities && if the key is a nutrient in the allVitAndMinerals array
       // (to avoid duplicate nutrients already added in nutri card)
