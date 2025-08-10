@@ -482,12 +482,9 @@ function renderRecipes(data) {
       totalTime = "?";
     }
 
-    // List the ingredients
-    const recipeIngredientsList = $("<ul>").addClass("recipe-ingredients-list");
-    for (let j = 0; j < recipeIngredients.length; j++) {
-      const recipeIngredient = $(`<li>${recipeIngredients[j].food}</li>`);
-      recipeIngredientsList.append(recipeIngredient);
-    }
+    // List ingredients horizontally
+    const ingredientNames = recipeIngredients.map(ingredient => ingredient.food);
+    const recipeIngredientsList = $("<span>").text(ingredientNames.join(", "));
 
     // Build list with images of ingredients
     const recipeIngredientsDetail = $("<ul>").addClass("recipe-ingredients-detail list-unstyled");

@@ -46,6 +46,19 @@
   line-height: 1.2rem; /* Match recipe heading line-height  */ 
 }
 
+/* Recipe ingredients styling */
+.recipe-ingredients {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #666;
+  margin: 0.75rem 0;
+}
+
+.recipe-ingredients span {
+  font-weight: 500;
+  color: #555;
+}
+
 /* recipe filters */
 fieldset {
   padding: 0.6rem;
