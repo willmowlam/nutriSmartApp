@@ -129,9 +129,23 @@ button{
 }
 
 /* FOOTER */
+
+/* Sticky footer layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
 .footer{
     padding-top: 1rem;
     text-align: center;
+    margin-top: auto;
 }
 .footer a{
     text-decoration: none;
