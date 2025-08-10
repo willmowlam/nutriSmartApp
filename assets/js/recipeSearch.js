@@ -726,7 +726,7 @@ function renderDietLabels(recipe) {
   // Loop and add each diet label to the element
   for (let i = 0; i < dietLabels.length; i++) {
     const label = $("<span>")
-      .addClass("badge badge-pill badge-secondary recipe-label-badge")
+      .addClass("badge badge-pill badge-secondary recipe-label-badge me-2")
       .text(dietLabels[i]);
     $(el).append(label);
 
