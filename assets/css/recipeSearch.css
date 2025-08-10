@@ -54,6 +54,12 @@ fieldset {
   border-radius: 10px;
 }
 
+/* Ensure form-check groups stay together */
+.form-check-inline {
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
 label {
   padding: 0.2rem;
   margin: 0.1rem;

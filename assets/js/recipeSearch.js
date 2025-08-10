@@ -125,19 +125,18 @@ for (let i = 0; i < allergiesArray.length; i++) {
   let allergy = allergiesArray[i];
   // console.log(allergy)
 
-  let allergyItemContainerEl = $("<span>").addClass("choiceContainer");
-
-  let allergyLabel = $("<label>").attr("for", `alergy-${allergy}`).text(allergy);
+  let allergyItemContainerEl = $("<div>").addClass("form-check form-check-inline");
 
   let allergyCheckboxEl = $("<input>").attr({
     type: "checkbox",
     name: `allergy`,
     id: `${allergy}`,
     value: `${allergy.toLowerCase()}`,
-  });
+  }).addClass("form-check-input");
+
+  let allergyLabel = $("<label>").attr("for", `${allergy}`).text(allergy).addClass("form-check-label");
 
   $("#allergies-options").append(allergyItemContainerEl);
-  // allergyItemContainerEl.append(allergyLabel, allergyCheckboxEl)
   allergyItemContainerEl.append(allergyCheckboxEl, allergyLabel);
 }
 
@@ -147,16 +146,16 @@ for (let i = 0; i < cuisinesArray.length; i++) {
   let cuisine = cuisinesArray[i];
   // console.log(cuisine)
 
-  let cuisineItemContainerEl = $("<span>").addClass("choiceContainer");
+  let cuisineItemContainerEl = $("<div>").addClass("form-check form-check-inline");
 
   let cuisineRadioEl = $("<input>").attr({
     type: "radio",
     name: `cuisine`,
     id: `${cuisine}`,
     value: `${cuisine.toLowerCase()}`,
-  });
+  }).addClass("form-check-input");
 
-  let cuisineLabel = $("<label>").attr("for", `cuisine-${cuisine}`).text(cuisine);
+  let cuisineLabel = $("<label>").attr("for", `${cuisine}`).text(cuisine).addClass("form-check-label");
 
   $("#cuisine-options").append(cuisineItemContainerEl);
   cuisineItemContainerEl.append(cuisineRadioEl, cuisineLabel);
