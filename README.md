@@ -43,7 +43,7 @@ Welcome to nutriSmart, the innovative app designed to revolutionize your meal pl
 
 To view the code files, you can Git Clone by following the instructions below:
 
-1. Clone the repository: `git clone https://github.com/jennysiu/nutriSmartApp.git`
+1. Clone the repository: `git clone https://github.com/willmowlam/nutriSmartApp.git`
 2. Navigate to the project directory: `cd nutriSmartApp`
 3. Start the development server: `npm run dev`
 4. Open your browser to `http://localhost:3000`
@@ -52,7 +52,7 @@ The development server includes live reload, so changes to files will automatica
 
 ## Usage
 
-You can access the live URL here: https://jennysiu.github.io/nutriSmartApp/
+You can access the live URL here: https://willmowlam.github.io/nutriSmartApp/
 
 Once the webpage link is opened, it should look something like this:
 
