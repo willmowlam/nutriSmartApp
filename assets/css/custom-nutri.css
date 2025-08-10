@@ -58,9 +58,10 @@
   margin-left: 0.5rem !important;
   width: fit-content;
   height: fit-content;
-  background-color: var(--light-green);
+  background-color: var(--green);
   font-weight: bold;
   font-size: small;
+  text-transform: lowercase;
 }
   
 /* Nutrition card */

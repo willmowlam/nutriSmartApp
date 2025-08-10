@@ -532,12 +532,14 @@ function renderRecipes(data) {
             <div class="col-sm-9 d-flex flex-column">
               <div class="d-flex justify-content-start align-items-start">
                 <h3>${recipe.label}</h3>
-                ${renderDietLabels(recipe)}
                 <button class="recipe-favourite ms-auto" data-uri="${recipeUri}" data-index="${i}" data-fav="${recipeDataFav}">
                 <i class="bi ${recipeFavIcon}"></i></button>
               </div>
               <div class="recipe-ingredients">Ingredients: 
                 ${recipeIngredientsList.prop("outerHTML")}
+              </div>
+              <div class="recipe-diet-labels">
+                ${renderDietLabels(recipe)}
               </div>
               <div class="mt-auto recipe-button-container pb-3">
                 <button class="recipe-nutrition-button btn btn-primary btn-md">Nutrition 
@@ -724,7 +726,7 @@ function renderDietLabels(recipe) {
   // Loop and add each diet label to the element
   for (let i = 0; i < dietLabels.length; i++) {
     const label = $("<span>")
-      .addClass("badge badge-pill badge-success recipe-label-badge")
+      .addClass("badge badge-pill badge-secondary recipe-label-badge")
       .text(dietLabels[i]);
     $(el).append(label);
 
