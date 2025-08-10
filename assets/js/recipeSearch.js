@@ -571,7 +571,7 @@ function renderRecipes(data) {
               <table class="nutrition-card__table">
                 <thead>
                   <tr>
-                    <th colspan="3" class="small-info">Total Amount</th>
+                    <th colspan="3" class="small-info">${recipeYield && recipeYield > 1 ? 'Per Serving' : 'Total Amount'}</th>
                   </tr>
                 </thead>
                 <tbody>
