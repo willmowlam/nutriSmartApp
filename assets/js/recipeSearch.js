@@ -101,6 +101,7 @@ function renderRecipeSearchIngredients() {
   // Clear the ingredients search buttons
   $("#ingredientsToSearch").empty();
   $("#searchRecipes").addClass("d-none");
+  $("#filterToggleBtn").addClass("d-none");
 
   // Add buttons for each in the global array to search
   for (i = 0; i < ingredientsSearch.length; i++) {
