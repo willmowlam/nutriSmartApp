@@ -54,8 +54,6 @@
 
 .recipe-label-badge {
   padding: auto;
-  margin-top: 0.3rem !important;
-  margin-left: 0.5rem !important;
   width: fit-content;
   height: fit-content;
   background-color: var(--green);
