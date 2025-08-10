@@ -130,7 +130,7 @@ for (let i = 0; i < allergiesArray.length; i++) {
   let allergyCheckboxEl = $("<input>").attr({
     type: "checkbox",
     name: `allergy`,
-    id: `${allergy}`,
+    id: `allergy-${allergy}`,
     value: `${allergy.toLowerCase()}`,
   }).addClass("form-check-input");
 
@@ -151,11 +151,11 @@ for (let i = 0; i < cuisinesArray.length; i++) {
   let cuisineRadioEl = $("<input>").attr({
     type: "radio",
     name: `cuisine`,
-    id: `${cuisine}`,
+    id: `cuisine-${cuisine}`,
     value: `${cuisine.toLowerCase()}`,
   }).addClass("form-check-input");
 
-  let cuisineLabel = $("<label>").attr("for", `${cuisine}`).text(cuisine).addClass("form-check-label");
+  let cuisineLabel = $("<label>").attr("for", `cuisine-${cuisine}`).text(cuisine).addClass("form-check-label");
 
   $("#cuisine-options").append(cuisineItemContainerEl);
   cuisineItemContainerEl.append(cuisineRadioEl, cuisineLabel);
