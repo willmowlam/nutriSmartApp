@@ -1,0 +1,29 @@
+{
+  "name": "nutrismartapp",
+  "version": "0.0.0",
+  "description": "A nutrition and recipe search application powered by Edamam APIs",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": [
+    "nutrition",
+    "recipes",
+    "health",
+    "edamam",
+    "javascript",
+    "jquery",
+    "frontend",
+    "api"
+  ],
+  "contributors": [
+    "Jenny Siu",
+    "Will Mowlam",
+    "Grace Emah"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
