@@ -514,8 +514,8 @@ function renderRecipes(data) {
     const recipeFavIcon = isFavouriteRecipe(recipeUri) ? "bi-heart-fill" : "bi-heart";
     const recipeDataFav = isFavouriteRecipe(recipeUri) ? "true" : "false";
 
-    // Remove the string "recipe" from the end of the recipe title
-    const recipeTitle = recipe.label.replace(/recipe$/i, "").trim();
+    // Remove the string "recipes" from the end of the recipe title
+    const recipeTitle = recipe.label.replace(/recipes$/i, "").trim();
 
     const recipeResult = $(`
 
