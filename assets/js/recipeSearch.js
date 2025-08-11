@@ -514,6 +514,9 @@ function renderRecipes(data) {
     const recipeFavIcon = isFavouriteRecipe(recipeUri) ? "bi-heart-fill" : "bi-heart";
     const recipeDataFav = isFavouriteRecipe(recipeUri) ? "true" : "false";
 
+    // Remove the string "recipe" from the end of the recipe title
+    const recipeTitle = recipe.label.replace(/recipe$/i, "").trim();
+
     const recipeResult = $(`
 
         <div class="recipe-result py-3" data-uri="${recipeUri}">
@@ -531,7 +534,7 @@ function renderRecipes(data) {
 
             <div class="col-sm-9 d-flex flex-column">
               <div class="d-flex justify-content-start align-items-start">
-                <h3>${recipe.label}</h3>
+                <h3>${recipeTitle}</h3>
                 <button class="recipe-favourite ms-auto" data-uri="${recipeUri}" data-index="${i}" data-fav="${recipeDataFav}">
                 <i class="bi ${recipeFavIcon}"></i></button>
               </div>
