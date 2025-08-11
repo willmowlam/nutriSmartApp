@@ -1,6 +1,6 @@
 # NutriSmart App
 
-Welcome to nutriSmart, the innovative app designed to revolutionize your meal planning and nutritional tracking. Powered by Edamam's robust APIs, nutriSmart offers a comprehensive suite of tools to cater to your dietary needs and culinary curiosities.
+Welcome to NutriSmart, the innovative app designed to revolutionize your meal planning and nutritional tracking. Powered by Edamam's robust APIs, NutriSmart offers a comprehensive suite of tools to cater to your dietary needs and culinary curiosities.
 
 [Live Demo](https://willmowlam.github.io/nutriSmartApp/)
 
