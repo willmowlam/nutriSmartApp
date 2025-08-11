@@ -136,7 +136,7 @@ for (let i = 0; i < allergiesArray.length; i++) {
     value: `${allergy.toLowerCase()}`,
   }).addClass("form-check-input");
 
-  let allergyLabel = $("<label>").attr("for", `${allergy}`).text(allergy).addClass("form-check-label");
+  let allergyLabel = $("<label>").attr("for", `allergy-${allergy}`).text(allergy).addClass("form-check-label");
 
   $("#allergies-options").append(allergyItemContainerEl);
   allergyItemContainerEl.append(allergyCheckboxEl, allergyLabel);
