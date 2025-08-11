@@ -569,7 +569,7 @@ function renderRecipes(data) {
             <!-- NUTRITION CARD -->
             <section class="col-sm-12 col-md-12 nutrition-card">
               <header class="nutrition-card__header">
-                <h4 class="nutrition-card__title">Nutrition Facts</h4>
+                <h4 class="nutrition-card__title">Nutrition</h4>
               </header>
               <table class="nutrition-card__table">
                 <thead>
