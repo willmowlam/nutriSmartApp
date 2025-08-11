@@ -1,10 +1,11 @@
 # NutriSmart App
 
-This is the README file for the NutriSmart App. It provides information about the project, how to get to it, and any other relevant details.
+Welcome to nutriSmart, the innovative app designed to revolutionize your meal planning and nutritional tracking. Powered by Edamam's robust APIs, nutriSmart offers a comprehensive suite of tools to cater to your dietary needs and culinary curiosities.
+
+[Live Demo](https://willmowlam.github.io/nutriSmartApp/)
 
 ## Table of Contents
 
-- [Description](#description)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -13,10 +14,6 @@ This is the README file for the NutriSmart App. It provides information about th
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Contact](#contact)
-
-## Description
-
-Welcome to nutriSmart, the innovative app designed to revolutionize your meal planning and nutritional tracking. Powered by Edamam's robust APIs, nutriSmart offers a comprehensive suite of tools to cater to your dietary needs and culinary curiosities.
 
 ## Features
 
