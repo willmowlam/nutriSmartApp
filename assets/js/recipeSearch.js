@@ -330,6 +330,9 @@ $("#searchRecipes").on("click", function () {
 
 // Event listener for delete favourites button
 $("#deleteAllFavourites").on("click", function () {
+  // Remove focus from this button before modal closes
+  $(this).blur();
+  
   // Flush favourites array
   favouriteRecipes.length = 0;
 
@@ -341,11 +344,26 @@ $("#deleteAllFavourites").on("click", function () {
 
   // Render the edit favourites modal so it is emptied too
   renderFavouritesModal();
+  
+  // Close modal using jQuery
+  $("#favouriteRecipesEditModal").modal('hide');
+});
+
+// Event listeners for modal close buttons
+$("#modalCloseButton, #modalCloseSecondaryButton").on("click", function () {
+  $(this).blur();
+  $("#favouriteRecipesEditModal").modal('hide');
 });
 
 // Event listener for the favourites modal to update its contents before being displayed
 $("#favouriteRecipesEditModal").on("show.bs.modal", function (event) {
   renderFavouritesModal();
+});
+
+// Event listener for when the modal is fully hidden to manage focus
+$("#favouriteRecipesEditModal").on("hidden.bs.modal", function (event) {
+  // Return focus to the edit button that opened the modal
+  $("#editFavouriteRecipes").focus();
 });
 
 // Render the favourites modal from the favourites array
